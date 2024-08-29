@@ -28,7 +28,7 @@ export const generateMetadata = async ({ params }: IProps) => ({
  */
 const ResumePage = async ({ params }: IProps) => (
   <main className="container space-y-4">
-    <div className="stack mt-5 justify-between">
+    <div className="stack justify-between pt-5">
       <BackLink />
       <PrintButton />
     </div>
