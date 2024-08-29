@@ -33,7 +33,7 @@ const ResumePage = async ({ params }: IProps) => (
       <PrintButton />
     </div>
     {[ProfileSection, StatsSection, RepositoriesSection].map((Component, index) => (
-      <Suspense key={index} fallback={<>Loading {Component.name}...</>}>
+      <Suspense key={index} fallback={<div>Loading {Component.name}...</div>}>
         <Component {...params} />
       </Suspense>
     ))}
