@@ -8,6 +8,14 @@ import { PrintButton } from '@/components/print-button';
 
 export const revalidate = 3600; // 1 hour
 
+interface IProps {
+  params: { username: string };
+}
+
+export const generateMetadata = async ({ params }: IProps) => ({
+  title: params.username,
+});
+
 /**
  * Resume page.
  *
@@ -18,7 +26,7 @@ export const revalidate = 3600; // 1 hour
  * @param params - The parameters containing the GitHub "username".
  * @constructor
  */
-const ResumePage = async ({ params }: { params: Username }) => (
+const ResumePage = async ({ params }: IProps) => (
   <main className="container space-y-4">
     <div className="stack mt-5 justify-between">
       <BackLink />
