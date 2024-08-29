@@ -18,7 +18,7 @@ export const revalidate = 3600; // 1 hour
  * @param params - The parameters containing the GitHub "username".
  * @constructor
  */
-const ResumePage: FC<{ params: Username }> = async ({ params }) => (
+const ResumePage = async ({ params }: { params: Username }) => (
   <main className="container space-y-4">
     <div className="stack mt-5 justify-between">
       <BackLink />
