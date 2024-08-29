@@ -20,8 +20,15 @@ export const ProfileSection: FC<Username> = async (props) => {
   const name = profile.name ?? username;
   const createdAt = dayjs(created_at).format('YYYY');
 
+  // NOTE: contributors & organizations > Always empty {}
+  // const contributors = getContributions(username);
+  // const organizations = getOrganizations(username);
+
   return (
     <Section>
+      {/*<Debug title="ccc" data={contributors} />*/}
+      {/*<Debug title="ooo" data={organizations} />*/}
+      <hr />
       <div className="stack m-0 flex-1 flex-col-reverse gap-x-10 sm:flex-row">
         <div className="flex w-full flex-col text-lg leading-relaxed">
           <Link

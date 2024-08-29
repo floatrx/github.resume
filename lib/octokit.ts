@@ -59,3 +59,13 @@ export const getLanguageStats = cache(async (username: string) => {
 
   return Object.fromEntries(Object.entries(languageStats).sort(([, a], [, b]) => b - a));
 });
+
+export const getContributions = async (username: string) => {
+  const { data } = await octokit.rest.activity.listPublicEventsForUser({ username });
+  return data;
+};
+
+export const getOrganizations = async (username: string) => {
+  const { data } = await octokit.rest.orgs.listForUser({ username });
+  return data;
+};

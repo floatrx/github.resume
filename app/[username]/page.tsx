@@ -25,7 +25,7 @@ const ResumePage = async ({ params }: { params: Username }) => (
       <PrintButton />
     </div>
     {[ProfileSection, StatsSection, RepositoriesSection].map((Component, index) => (
-      <Suspense key={index} fallback={null}>
+      <Suspense key={index} fallback={<>Loading {Component.name}...</>}>
         <Component {...params} />
       </Suspense>
     ))}
