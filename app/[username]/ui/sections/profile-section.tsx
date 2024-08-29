@@ -28,7 +28,6 @@ export const ProfileSection: FC<Username> = async (props) => {
     <Section>
       {/*<Debug title="ccc" data={contributors} />*/}
       {/*<Debug title="ooo" data={organizations} />*/}
-      <hr />
       <div className="stack m-0 flex-1 flex-col-reverse gap-x-10 sm:flex-row">
         <div className="flex w-full flex-col text-lg leading-relaxed">
           <Link
